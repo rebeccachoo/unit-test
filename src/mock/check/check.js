@@ -5,4 +5,5 @@ function check(predicate, onSuccess, onFail) {
     onFail("no");
   }
 }
+
 module.exports = check;
