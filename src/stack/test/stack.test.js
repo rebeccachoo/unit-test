@@ -24,4 +24,17 @@ describe("Stack", () => {
       expect(stack.size()).toBe(1);
     });
   });
+  describe("peek", () => {
+    it("throws an error if stack is empty", () => {
+      expect(() => {
+        stack.peek();
+      }).toThrow("stack is empty");
+    });
+    it("returns the last pushed item but keeps it in the stack", () => {
+      stack.push("🍎");
+      stack.push("🍌");
+      expect(stack.peek()).toBe("🍌");
+      expect(stack.size()).toBe(2);
+    });
+  });
 });

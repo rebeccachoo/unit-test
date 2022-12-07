@@ -14,5 +14,11 @@ class Stack {
     }
     return this.array.pop();
   }
+  peek() {
+    if (this.array.length === 0) {
+      throw new Error("stack is empty");
+    }
+    return this.array[this.size() - 1];
+  }
 }
 module.exports = Stack;
